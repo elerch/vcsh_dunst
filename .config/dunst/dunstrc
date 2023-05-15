@@ -182,7 +182,19 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
+    # browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/xdg-open
+
+    # Need to decide what to do with:
+    # - notifysend
+    # - notifysend-monitor
+    # - urlify
+    # - also, the monitor needs a timeout feature (easy in golang)
+    # open_url is a newer dunst feature. For now, you need to have the action
+    # do that
+    # mouse_left_click = open_url #, close_current
+    # mouse_middle = context
+    mouse_left_click = do_action, close_current
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
